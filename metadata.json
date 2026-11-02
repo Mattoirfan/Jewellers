@@ -1,0 +1,6 @@
+{
+  "name": "Aurelia Fine Jewels",
+  "description": "Timeless elegance crafted for your story. Luxury fine jewellery, bespoke creations, bridal collections, and certified gemstones.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

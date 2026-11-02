@@ -1,0 +1,1373 @@
+# MASTER PROMPT: AURELIA FINE JEWELS — PREMIUM JEWELLERY E-COMMERCE WEBSITE
+
+## Project mission
+
+Act as a world-class luxury jewellery brand strategist, e-commerce UX designer, full-stack developer, product photographer, database architect, jewellery retail consultant, security engineer, and SEO specialist.
+
+Research the jewellery retail industry and build a complete, visually exceptional, production-ready, multi-page jewellery e-commerce website named **AURELIA FINE JEWELS**.
+
+The brand should feel elegant, contemporary, premium, trustworthy, and emotionally appealing. It should be suitable for an Indian jewellery retailer selling gold, diamond, silver, gemstone, bridal, and everyday jewellery, with the ability to serve international customers when shipping, payments, and compliance are configured.
+
+The website must be a complete application—not just a homepage mockup. Build a polished frontend, secure backend, database, product catalogue, shopping cart, checkout, payment integration, customer accounts, inventory system, custom jewellery enquiry workflow, jewellery care and repair services, and administrative dashboard.
+
+The final result must be suitable for presenting to a real jewellery business owner.
+
+Do not stop at design concepts or static screens. Implement the routes, working interactions, database-backed workflows, generated images, validation, and tests.
+
+---
+
+# 1. BRAND IDENTITY AND DESIGN SYSTEM
+
+## Brand
+
+Name: AURELIA FINE JEWELS
+
+Tagline: “Timeless Elegance. Crafted for Your Story.”
+
+Brand personality:
+- Refined.
+- Elegant.
+- Trustworthy.
+- Modern.
+- Romantic.
+- Premium without feeling intimidating.
+- Traditional craftsmanship with contemporary presentation.
+
+Create an original brand identity and custom SVG logo. The logo can combine an abstract gemstone, elegant monogram, or subtle floral geometry with the brand name.
+
+Do not copy existing jewellery brands, trademarks, logos, or copyrighted campaign artwork.
+
+## Color palette
+
+Create a beautiful, balanced, multi-color design. Do not make the entire website gold, black, or dark green.
+
+Use the following palette:
+
+- Champagne gold: `#C5A46D` — premium accents, fine borders, selected icons.
+- Deep emerald: `#245B4A` — primary brand accent and selected feature sections.
+- Warm ivory: `#FAF7F0` — primary page background.
+- Porcelain white: `#FFFFFF` — product cards and clean content surfaces.
+- Soft blush: `#F1E2DC` — bridal and gifting sections.
+- Dusty rose: `#B87878` — restrained secondary accent.
+- Ink navy: `#283447` — readable headings and important dark text.
+- Muted taupe: `#82796E` — supporting text.
+- Pale gold: `#E9D9B8` — soft decorative highlights.
+- Border gray: `#E7E2D9` — dividers and card outlines.
+
+Use champagne gold sparingly to create a luxury impression. Use ivory and white for most product browsing and shopping surfaces. Emerald should create a recognizable brand identity, while blush and rose tones can enhance bridal and gifting pages.
+
+Do not use harsh neon colors, excessive gradients, overly dark backgrounds, or gold-colored text that becomes difficult to read.
+
+Buttons must have sufficient contrast. Use gold as an accent rather than placing long paragraphs in low-contrast gold text.
+
+## Typography
+
+Use an elegant serif typeface for selected headlines, such as Cormorant Garamond or Playfair Display, combined with a clean sans-serif font such as Inter or Manrope for navigation, body text, product specifications, and forms.
+
+Maintain:
+- Consistent font hierarchy.
+- Readable paragraph sizes.
+- Clear price typography.
+- Proper word spacing.
+- Balanced line heights.
+- Elegant but restrained uppercase labels.
+- Appropriate responsive typography.
+- Clear distinction between product name, material, price, and product details.
+
+Avoid cramped text, overlapping labels, excessive letter spacing, and decorative fonts for essential product information.
+
+## Visual design
+
+Use:
+- High-quality jewellery photography.
+- Large editorial campaign imagery.
+- Clean white and ivory product backgrounds.
+- Subtle champagne-gold borders.
+- Carefully spaced product cards.
+- Premium product detail galleries.
+- Tasteful shadows.
+- Fine separators.
+- Beautiful category banners.
+- Elegant hover effects.
+- Refined page transitions.
+- A consistent icon system.
+- Generous whitespace.
+- A mobile-first layout.
+
+The design should resemble a contemporary luxury jewellery boutique rather than a generic marketplace template.
+
+---
+
+# 2. MANDATORY DESKTOP NAVIGATION REQUIREMENT
+
+This is a non-negotiable implementation requirement.
+
+The desktop header navigation must remain on **one single horizontal line**.
+
+Example:
+
+`[AURELIA LOGO]  Home  Collections  Gold  Diamond  Bridal  Custom Jewellery  About Us  Contact  [Search] [Account] [Wishlist] [Cart]`
+
+All menu labels must remain on one line.
+
+Incorrect:
+
+About
+Us
+
+Correct:
+
+About Us
+
+The same rule applies to:
+- Custom Jewellery.
+- Bridal Jewellery.
+- Our Collections.
+- Jewellery Care.
+- Book a Consultation.
+- Track My Order.
+
+## Technical requirements
+
+1. Use a well-structured flex-based desktop header.
+2. Use `display: flex`, `align-items: center`, and `flex-wrap: nowrap` for the desktop navigation.
+3. Apply `white-space: nowrap` to individual navigation labels.
+4. Prevent the logo, navigation, and utility icons from colliding.
+5. Maintain consistent horizontal gaps, padding, margins, and vertical alignment.
+6. Use an appropriate maximum container width and responsive spacing.
+7. Avoid excessive margins that push navigation off-screen.
+8. If space becomes insufficient, reduce spacing moderately or move secondary items into a dropdown.
+9. At a suitable breakpoint, replace the desktop navigation with a polished mobile menu.
+10. Never allow the desktop navigation to wrap into multiple lines.
+11. Never permit horizontal scrolling caused by the header.
+12. Keep the header consistent across all public pages.
+13. Ensure sticky navigation does not cover page content.
+14. Test the header at 1280px, 1366px, 1440px, 1920px, and intermediate viewport widths.
+
+On mobile, an accessible hamburger menu or slide-out menu is appropriate. Stacked links inside the opened mobile menu are acceptable. A multi-line desktop navigation is not.
+
+Include working navigation states, accessible keyboard interactions, visible focus indicators, and meaningful link destinations.
+
+Treat the single-line header requirement as a testable acceptance criterion.
+
+---
+
+# 3. MANDATORY SPLASH AI JEWELLERY IMAGES
+
+Use **Splash AI or its available image-generation integration** to generate original jewellery photography and campaign visuals.
+
+The generated images must actually be integrated into the website. Do not leave empty image placeholders, broken URLs, or unimplemented image descriptions.
+
+If Splash AI is unavailable in the environment, use a compatible image-generation fallback and document the integration limitation. Do not claim an image was generated or uploaded unless the action was successful.
+
+## Required image assets
+
+Generate a cohesive collection containing:
+
+1. Homepage luxury jewellery campaign image.
+2. Gold necklace on an elegant ivory background.
+3. Diamond engagement rings in premium product photography.
+4. Gold earrings with detailed close-ups.
+5. Gold bangles and bracelets.
+6. Wedding and bridal jewellery set.
+7. Diamond pendant.
+8. Gemstone ring.
+9. Silver jewellery collection.
+10. Men's rings and chains.
+11. Minimal everyday jewellery.
+12. Traditional Indian jewellery.
+13. Polki- or Kundan-inspired bridal designs.
+14. Pearl jewellery.
+15. Jewellery gift boxes.
+16. Close-up gemstone and metal texture images.
+17. Jewellery craftsmanship and workshop imagery.
+18. Jewellery consultation and showroom imagery.
+19. Custom jewellery design presentation.
+20. Product photography for collection banners.
+21. Festival and wedding campaign images.
+22. Jewellery care and repair imagery.
+23. Blog article thumbnails.
+24. Gift-guide campaign imagery.
+
+Generate a mixture of:
+- Square product images.
+- Portrait product images.
+- Wide campaign banners.
+- Close-up detail photography.
+- Lifestyle imagery.
+- Jewellery-on-model photography.
+- Clean product images for product listings.
+
+## Image art direction
+
+- Use realistic, premium product photography.
+- Render jewellery with convincing metal reflections and gemstone details.
+- Keep the lighting soft and controlled.
+- Use coordinated backgrounds in ivory, beige, blush, and subtle emerald.
+- Make products the primary visual focus.
+- Use consistent image treatment across categories.
+- Avoid distorted rings, irregular gemstones, unrealistic clasps, malformed earrings, and incorrect reflections.
+- Do not place essential product text inside generated images.
+- Avoid repeating the same photograph across unrelated products.
+- Generate multiple views of the same product when possible.
+- Use proper cropping and responsive image sizes.
+- Optimize images for performance.
+- Provide meaningful alt text.
+- Use appropriate lazy loading for images below the fold.
+
+Do not present AI-generated jewellery images as exact photographs of physical inventory. Mark generated products as illustrative demo items until replaced with verified product photography.
+
+Do not use AI images to represent official hallmark marks, certification documents, authenticity certificates, or actual customer reviews.
+
+Create an original SVG logo and use it consistently throughout the application.
+
+---
+
+# 4. COMPLETE WEBSITE INFORMATION ARCHITECTURE
+
+Build all required pages with real routes and working internal links.
+
+## PAGE 1 — HOME
+
+Route: `/`
+
+Create a premium homepage with a visually striking campaign hero.
+
+Suggested headline:
+
+**“Jewellery That Becomes Part of Your Story.”**
+
+Supporting copy:
+
+“Discover timeless designs, thoughtful craftsmanship, and beautiful pieces for life's most meaningful moments.”
+
+Primary CTA: `Explore Collections`
+
+Secondary CTA: `Discover Bridal Jewellery`
+
+Include:
+
+- Hero campaign image.
+- New arrivals.
+- Best-selling products, based on real or clearly labeled demo data.
+- Gold jewellery collection.
+- Diamond jewellery collection.
+- Bridal jewellery showcase.
+- Everyday essentials.
+- Gifts for special occasions.
+- Personalized jewellery feature.
+- Jewellery craftsmanship story.
+- Custom jewellery consultation.
+- Featured products.
+- Customer testimonials, clearly labeled as demo content until genuine reviews are available.
+- Jewellery care information.
+- Store location and appointment CTA.
+- Newsletter subscription.
+- FAQs.
+- A polished footer with essential links.
+
+Use a mix of editorial image sections, product grids, collection cards, and promotional banners.
+
+Every CTA must lead to a working route or functional action.
+
+Do not fabricate popularity statistics, customer counts, product ratings, or awards.
+
+## PAGE 2 — ABOUT US
+
+Route: `/about`
+
+Include:
+- Brand story.
+- Design philosophy.
+- Craftsmanship approach.
+- Materials and product selection.
+- Quality-control process.
+- Brand values.
+- Team and designer profiles.
+- Workshop or showroom gallery.
+- Customer service philosophy.
+- Sustainability or responsible sourcing information only when verified.
+- CTA to browse collections.
+
+Use genuine brand information when available. Clearly identify demo content until the business provides approved facts.
+
+## PAGE 3 — ALL COLLECTIONS
+
+Route: `/collections`
+
+Create a premium collection landing page featuring:
+
+- New arrivals.
+- Best sellers.
+- Gold jewellery.
+- Diamond jewellery.
+- Bridal jewellery.
+- Everyday jewellery.
+- Traditional jewellery.
+- Contemporary jewellery.
+- Silver jewellery.
+- Gemstone jewellery.
+- Pearl jewellery.
+- Men's jewellery.
+- Gifts.
+- Personalized jewellery.
+- Limited collections, if genuinely offered.
+
+Every collection must link to a working collection page with relevant products, filters, and sorting.
+
+Create collection detail routes such as `/collections/[slug]`.
+
+## PAGE 4 — GOLD JEWELLERY
+
+Route: `/collections/gold`
+
+Include:
+- Gold rings.
+- Gold earrings.
+- Gold necklaces.
+- Gold chains.
+- Gold bangles.
+- Gold bracelets.
+- Gold pendants.
+- Gold sets.
+- Traditional gold jewellery.
+- Everyday gold jewellery.
+
+Allow customers to filter by:
+- Price.
+- Product type.
+- Gold purity or karat.
+- Color: yellow, white, or rose gold.
+- Occasion.
+- Design style.
+- Size, where applicable.
+- Availability.
+
+Display metal purity and fineness accurately for each product.
+
+Do not label an item as 22K, 18K, or any other purity without verified product data.
+
+## PAGE 5 — DIAMOND JEWELLERY
+
+Route: `/collections/diamond`
+
+Include:
+- Diamond rings.
+- Engagement rings.
+- Diamond earrings.
+- Diamond necklaces.
+- Diamond pendants.
+- Diamond bracelets.
+- Diamond sets.
+- Anniversary jewellery.
+
+Where applicable, show:
+- Diamond shape.
+- Carat weight.
+- Cut.
+- Color.
+- Clarity.
+- Certification details.
+- Metal type.
+- Total diamond weight.
+- Whether a grading report is available.
+
+Only display grading certificates or certification claims that are supported by genuine documentation.
+
+Provide educational explanations for diamond specifications without guaranteeing a quality grade that has not been verified.
+
+## PAGE 6 — BRIDAL JEWELLERY
+
+Route: `/collections/bridal`
+
+Create an emotionally appealing bridal collection experience featuring:
+- Bridal necklaces.
+- Wedding sets.
+- Earrings.
+- Bangles.
+- Maang tikka.
+- Nose jewellery.
+- Traditional designs.
+- Contemporary bridal styles.
+- Engagement jewellery.
+- Wedding gifts.
+
+Include:
+- Occasion filters.
+- Design inspiration.
+- Collection galleries.
+- Bridal styling guides.
+- Product recommendations.
+- Bridal consultation booking.
+- Custom design enquiry.
+
+Use premium campaign imagery and generous whitespace.
+
+## PAGE 7 — PRODUCT LISTING PAGES
+
+Routes:
+- `/collections/[slug]`
+- `/search`
+
+Build reusable product listing pages.
+
+Each product card must show:
+- Product image.
+- Product name.
+- Price or clearly explained price range.
+- Metal type and purity, where applicable.
+- Available variants.
+- Availability status.
+- Wishlist control.
+- Quick-view option, where useful.
+- Product detail link.
+- Promotional label only when valid.
+
+Implement:
+- Search.
+- Sorting.
+- Filtering.
+- Pagination or accessible incremental loading.
+- Empty search results.
+- Loading states.
+- Out-of-stock handling.
+- Mobile filter drawer.
+- Clear filters button.
+- Product count.
+
+Keep URLs crawlable and ensure filter states do not create an uncontrolled number of duplicate indexable pages.
+
+## PAGE 8 — PRODUCT DETAIL PAGE
+
+Route: `/products/[slug]`
+
+Every product needs a premium, detailed product page.
+
+Include:
+- Large product image gallery.
+- Zoom or enlarged image view.
+- Additional product angles.
+- Product name.
+- Price.
+- Product SKU.
+- Metal type.
+- Verified purity.
+- Gross weight and net precious-metal weight, where applicable.
+- Gemstone specifications.
+- Size or length options.
+- Color variants.
+- Product availability.
+- Estimated delivery information.
+- Shipping charges or shipping policy link.
+- Returns and exchange terms.
+- Care instructions.
+- Product description.
+- Craftsmanship details.
+- Certification details, if applicable.
+- Warranty terms, if applicable.
+- Related products.
+- Recently viewed products.
+- Frequently asked questions.
+- Wishlist.
+- Add to Cart.
+- Buy Now.
+- Contact a Jewellery Expert.
+
+For rings, provide a ring-size guide. For necklaces, chains, and bangles, provide suitable size guides.
+
+Support variant selection and validate the chosen variant against actual inventory.
+
+Never allow customers to buy an unavailable variant unless the product is explicitly configured for made-to-order purchasing.
+
+## PAGE 9 — PERSONALIZED AND CUSTOM JEWELLERY
+
+Route: `/custom-jewellery`
+
+Build a bespoke jewellery enquiry experience.
+
+Customers should be able to request:
+- Custom engagement rings.
+- Personalized pendants.
+- Name jewellery.
+- Initial jewellery.
+- Engraving.
+- Birthstone jewellery.
+- Custom wedding sets.
+- Family heirloom redesign.
+- Made-to-order pieces.
+
+Include a form for:
+- Name and contact information.
+- Preferred jewellery type.
+- Metal preference.
+- Gemstone preference.
+- Approximate budget.
+- Ring size or other relevant measurements.
+- Desired occasion.
+- Target date.
+- Design description.
+- Optional inspiration images.
+- Consultation preference.
+
+Explain the design consultation and approval process.
+
+Support configurable stages:
+1. Enquiry submitted.
+2. Consultation requested.
+3. Design discussion.
+4. Preliminary estimate.
+5. Design approval.
+6. Deposit request, if applicable.
+7. Production.
+8. Quality review.
+9. Ready for dispatch or collection.
+
+Custom products must not be sold using fabricated instant pricing. Use a quotation workflow where final price depends on approved specifications.
+
+Customers must approve the design and estimate before production begins.
+
+## PAGE 10 — JEWELLERY CARE AND REPAIR
+
+Route: `/jewellery-care`
+
+Include service information for:
+- Jewellery cleaning.
+- Polishing.
+- Ring resizing.
+- Chain repair.
+- Clasp repair.
+- Stone setting inspection.
+- Prong inspection.
+- Jewellery restoration.
+- Restringing pearls, where offered.
+- Engraving.
+- Jewellery maintenance consultation.
+
+Create a service request form with:
+- Item type.
+- Description of the issue.
+- Photos, where useful.
+- Requested service.
+- Preferred appointment.
+- Contact information.
+
+Explain that services, eligibility, turnaround times, and charges depend on the jewellery piece and inspection.
+
+Do not promise that all items can be repaired.
+
+Support request tracking if the business offers repair services.
+
+## PAGE 11 — PRICE GUIDE AND GOLD RATE INFORMATION
+
+Route: `/price-guide`
+
+Create an educational page explaining how jewellery pricing works.
+
+Where applicable, explain the components of a jewellery price:
+- Precious metal weight.
+- Purity.
+- Applicable metal rate.
+- Gemstone or diamond value.
+- Making charges.
+- Additional product-specific charges.
+- Applicable taxes.
+- Discounts, when valid.
+
+If live gold or silver rates are displayed, use a verified market-rate provider or authorized feed.
+
+Requirements:
+- Show the source and timestamp.
+- Show the currency and unit.
+- Identify the applicable purity or rate basis.
+- Make clear that the final product price may differ.
+- Handle unavailable rate feeds gracefully.
+- Never fabricate a live rate.
+- Never imply that an indicative rate is a binding purchase quote.
+
+Make the rate provider configurable and include an admin-managed fallback that is clearly labeled as manually updated.
+
+## PAGE 12 — STORE LOCATIONS AND APPOINTMENTS
+
+Routes:
+- `/stores`
+- `/book-appointment`
+
+Include:
+- Store directory.
+- Branch information.
+- Address and directions.
+- Opening hours.
+- Available services.
+- Appointment availability.
+- Jewellery consultation booking.
+- Bridal consultation.
+- Custom design consultation.
+- Jewellery care appointment.
+
+Use actual configured business information. Do not invent addresses, phone numbers, or opening hours.
+
+Booking must be connected to backend availability and must prevent conflicting appointments.
+
+## PAGE 13 — CUSTOMER REVIEWS
+
+Route: `/reviews`
+
+Include:
+- Genuine customer reviews.
+- Verified purchase labels only when verified.
+- Rating summaries derived from actual records.
+- Review moderation.
+- Product-specific reviews.
+- Customer consent and privacy controls.
+
+Do not create fake testimonials, invented ratings, or fabricated purchase verification.
+
+Use clearly marked demo reviews only in the demonstration environment.
+
+## PAGE 14 — BLOG AND STYLE GUIDE
+
+Route: `/journal`
+
+Build a luxury editorial content area covering:
+- Jewellery care.
+- Gold purity education.
+- Diamond education.
+- Engagement ring selection.
+- Bridal jewellery styling.
+- Gift guides.
+- Jewellery sizing.
+- Gemstone education.
+- Occasion-based styling.
+- Craftsmanship and design.
+
+Create article routes such as `/journal/[slug]`.
+
+Include:
+- Categories.
+- Search.
+- Author.
+- Publication date.
+- Related products.
+- Relevant collection links.
+- Social sharing metadata.
+
+Avoid misleading investment advice or unsupported claims about gemstone healing properties.
+
+## PAGE 15 — CONTACT
+
+Route: `/contact`
+
+Include:
+- Contact form.
+- Business email.
+- Phone number.
+- Store address.
+- Opening hours.
+- Social media links.
+- Directions.
+- FAQs.
+- Customer support information.
+
+Use validated forms, spam protection, clear success states, and error messages.
+
+## PAGE 16 — FAQ
+
+Route: `/faq`
+
+Include searchable FAQs about:
+- Gold purity.
+- Hallmarking.
+- Diamond specifications.
+- Product sizing.
+- Custom jewellery.
+- Shipping.
+- Returns and exchanges.
+- Payments.
+- Warranty.
+- Jewellery care.
+- Repair services.
+- Gift packaging.
+- Order tracking.
+- Privacy.
+
+Answers must match the actual policies and capabilities of the business.
+
+## PAGE 17 — CUSTOMER AUTHENTICATION
+
+Routes:
+- `/register`
+- `/login`
+- `/forgot-password`
+- `/reset-password`
+
+Implement:
+- Secure account creation.
+- Email verification.
+- Login and logout.
+- Password reset.
+- Session management.
+- Appropriate password rules.
+- Optional social login if configured.
+- Rate limiting.
+- Server-side authorization.
+- Accessible validation messages.
+
+Never store plaintext passwords.
+
+## PAGE 18 — CUSTOMER ACCOUNT DASHBOARD
+
+Route: `/account`
+
+Require authentication.
+
+Include:
+- Profile management.
+- Saved addresses.
+- Order history.
+- Order details.
+- Order tracking.
+- Wishlist.
+- Saved products.
+- Return and exchange requests.
+- Repair requests.
+- Custom jewellery enquiries.
+- Appointment history.
+- Invoice and receipt access.
+- Notification preferences.
+- Privacy settings.
+- Account deletion request.
+
+Only display records belonging to the authenticated customer.
+
+## PAGE 19 — SHOPPING CART
+
+Route: `/cart`
+
+Include:
+- Product thumbnails.
+- Selected variant and size.
+- Quantity.
+- Unit price.
+- Line total.
+- Remove item.
+- Save for later.
+- Promo code.
+- Shipping estimate.
+- Estimated taxes.
+- Order subtotal.
+- Final total.
+
+Validate price, availability, variants, discounts, and quantities on the server during checkout.
+
+Never trust prices supplied by the browser.
+
+## PAGE 20 — CHECKOUT AND PAYMENTS
+
+Routes:
+- `/checkout`
+- `/payment/success`
+- `/payment/failed`
+- `/payment/cancelled`
+
+Support suitable payment methods for the configured market.
+
+Possible integrations:
+- Razorpay for supported Indian payment methods.
+- Stripe for supported markets.
+- Other approved providers when appropriate.
+
+Implement:
+- Guest checkout if enabled.
+- Customer checkout.
+- Shipping and billing addresses.
+- Delivery options.
+- Gift message.
+- Gift packaging option.
+- Coupon validation.
+- Order summary.
+- Applicable taxes.
+- Shipping calculation.
+- Secure payment initiation.
+- Payment verification.
+- Signed webhooks.
+- Idempotent order processing.
+- Order confirmation.
+- Receipts and invoices.
+- Cancellation and refund workflows.
+
+Never mark an order paid solely because a browser redirects to a success page.
+
+Never store raw payment card details.
+
+If credentials are missing, use a clearly labeled test mode and provide configuration instructions. Do not claim that a live transaction succeeded without actual verification.
+
+## PAGE 21 — ORDER TRACKING
+
+Route: `/track-order`
+
+Authenticated customers should see:
+- Order number.
+- Order date.
+- Payment status.
+- Fulfilment status.
+- Shipment information.
+- Tracking link when available.
+- Estimated delivery range when supported.
+- Return eligibility.
+- Contact support option.
+
+Use configurable states such as:
+- Order received.
+- Payment confirmed.
+- Processing.
+- Quality check.
+- Ready for dispatch.
+- Shipped.
+- Delivered.
+- Cancelled.
+- Return requested.
+- Refunded.
+
+Only display genuine shipment tracking information.
+
+## PAGE 22 — ADMIN DASHBOARD
+
+Route: `/admin`
+
+Build a secure admin interface for authorized staff.
+
+### Product management
+- Create and edit products.
+- Upload and manage images.
+- Assign collections.
+- Configure variants.
+- Manage sizes.
+- Set prices.
+- Manage inventory.
+- Set product availability.
+- Update specifications.
+- Manage product descriptions and SEO metadata.
+- Publish and archive products.
+
+### Precious metal and gemstone data
+Support configurable fields for:
+- Metal type.
+- Purity and fineness.
+- Gross weight.
+- Net precious-metal weight.
+- Stone weight.
+- Gemstone specifications.
+- Product certification details.
+- Hallmark and HUID fields where applicable.
+- Making charges.
+- Additional charges.
+- Tax configuration.
+- Product-specific pricing.
+
+Keep customer-facing certification claims tied to verified records.
+
+### Order management
+- View orders.
+- Update fulfilment status.
+- Handle cancellations.
+- Manage returns and refunds.
+- Generate invoices.
+- Review payment status.
+- Record customer communications.
+
+### Inventory management
+- SKU.
+- Product variants.
+- Stock quantities.
+- Reserved stock.
+- Low-stock alerts.
+- Stock adjustments.
+- Product availability.
+
+Use appropriate inventory controls for high-value products.
+
+### Custom jewellery management
+- Review enquiries.
+- Assign a designer or advisor.
+- Record quotations.
+- Track design approval.
+- Track deposits where applicable.
+- Update production stages.
+- Communicate with customers.
+
+### Repair and appointment management
+- Review repair requests.
+- Manage appointments.
+- Record service status.
+- Manage assigned staff.
+- Provide customer updates.
+
+### Content management
+- Homepage banners.
+- Collection pages.
+- Journal articles.
+- FAQs.
+- Store details.
+- Policies.
+- Images.
+- Promotional campaigns.
+- Navigation links.
+
+### Business analytics
+- Orders.
+- Sales.
+- Average order value.
+- Product performance.
+- Inventory.
+- Returns.
+- Custom enquiry conversion.
+- Appointment activity.
+
+Clearly distinguish demo data from real analytics.
+
+### Staff permissions
+Support suitable roles such as:
+- Owner.
+- Administrator.
+- Store manager.
+- Inventory manager.
+- Jewellery consultant.
+- Order fulfilment staff.
+
+Apply role-based permissions and audit logging.
+
+---
+
+# 5. JEWELLERY CATALOGUE AND PRICING LOGIC
+
+Create a robust product data model.
+
+Each product should support:
+- Unique product ID.
+- SKU.
+- Product name.
+- Slug.
+- Description.
+- Collection.
+- Category.
+- Material.
+- Purity.
+- Weight.
+- Gemstone details.
+- Dimensions.
+- Size variants.
+- Image gallery.
+- Stock status.
+- Price.
+- Tax classification where applicable.
+- Shipping information.
+- Care instructions.
+- Warranty terms where applicable.
+- Return eligibility.
+- Certification records.
+- SEO metadata.
+
+## Pricing requirements
+
+Support multiple pricing models:
+
+1. Fixed-price jewellery.
+2. Variant-specific prices.
+3. Weight-based or market-linked pricing, where appropriate.
+4. Made-to-order pricing.
+5. Custom quotations.
+6. Sale prices with valid start and end dates.
+7. Product-specific making charges.
+8. Applicable taxes and shipping.
+
+For market-linked products, calculate prices using a verified rate source and the actual product data.
+
+For fixed-price products, use the authorized price configured in the catalogue.
+
+Keep pricing calculations server-side. Recalculate totals at checkout.
+
+Explain product-specific pricing components clearly where applicable.
+
+Do not use a fabricated live gold rate, fictional certificate number, or unverified purity claim.
+
+---
+
+# 6. DATABASE AND BACKEND ARCHITECTURE
+
+Use a modern, maintainable stack:
+
+- Next.js App Router.
+- React.
+- TypeScript.
+- Tailwind CSS.
+- Supabase and PostgreSQL.
+- Secure authentication.
+- Supabase Storage or a suitable secure image-storage service.
+- Zod for validation.
+- A suitable payment gateway.
+- Transactional email integration.
+- Reliable logging and monitoring.
+
+Use mutually compatible stable versions.
+
+Design normalized tables with suitable relationships, indexes, constraints, and access policies.
+
+Suggested entities:
+- `profiles`
+- `roles`
+- `addresses`
+- `products`
+- `product_variants`
+- `product_images`
+- `collections`
+- `collection_products`
+- `categories`
+- `inventory`
+- `inventory_movements`
+- `wishlists`
+- `wishlist_items`
+- `carts`
+- `cart_items`
+- `orders`
+- `order_items`
+- `payments`
+- `refunds`
+- `shipments`
+- `reviews`
+- `discount_codes`
+- `custom_jewellery_requests`
+- `custom_design_revisions`
+- `appointments`
+- `repair_requests`
+- `repair_status_history`
+- `store_locations`
+- `metal_rate_records`
+- `certification_records`
+- `articles`
+- `faqs`
+- `contact_submissions`
+- `notifications`
+- `audit_logs`
+- `site_settings`
+
+Adapt the final schema to the implementation.
+
+Implement:
+- Database migrations.
+- Seed/demo data.
+- Server-side validation.
+- Authorization checks.
+- Row-level security.
+- Secure image uploads.
+- Inventory consistency.
+- Transaction-safe order creation.
+- Idempotent payment processing.
+- Safe error handling.
+- Pagination and filtering.
+- Appropriate audit logs.
+- Backup and recovery guidance.
+
+Never expose service-role keys, payment secrets, or private credentials in frontend code.
+
+Provide `.env.example` with required variable names and descriptions but no actual secrets.
+
+---
+
+# 7. SHIPPING, RETURNS, AND CUSTOMER TRUST
+
+Make customer policies visible and understandable.
+
+Implement configurable:
+- Shipping regions.
+- Shipping charges.
+- Free-shipping thresholds.
+- Estimated dispatch times.
+- Estimated delivery ranges.
+- Order tracking.
+- Cancellation eligibility.
+- Return and exchange rules.
+- Refund status.
+- Warranty terms.
+- Gift packaging.
+- Secure packaging information.
+
+Do not invent shipping partnerships or guarantee delivery dates that are not supported by the shipping provider.
+
+For high-value jewellery, support appropriate order verification, secure fulfilment procedures, and shipment tracking.
+
+Clearly disclose exclusions for customized or personalized products where legally appropriate.
+
+Make policy terms editable and review them for the relevant jurisdiction before launch.
+
+---
+
+# 8. HALLMARKING, CERTIFICATION, AND COMPLIANCE
+
+Because the default market is India, include accurate jewellery information and compliance-aware product fields.
+
+Where applicable, support:
+- Metal purity.
+- Fineness.
+- Hallmark details.
+- HUID field for relevant hallmarked gold products.
+- Verified certification documents.
+- Product-specific invoice details.
+- Precious-metal weight.
+- Making charges.
+- Applicable taxes.
+
+Do not automatically mark every product as hallmarked or certified.
+
+Only display a BIS registration claim, hallmark, HUID, diamond grading report, or other certification when the business has supplied verified data and is legally entitled to make that claim.
+
+Keep certification data associated with the relevant product or item. Do not invent certificate numbers.
+
+Make invoice information configurable to meet applicable requirements. Confirm current BIS rules, applicable hallmarking requirements, tax treatment, and consumer obligations before launch.
+
+Official references:
+- BIS jeweller guidance: https://www.bis.gov.in/hallmarking-jewellers/
+- BIS hallmarking FAQ: https://www.bis.gov.in/hallmarking-overview/hallmarking-faqs/hallmarking-faq/
+
+---
+
+# 9. SEO AND E-COMMERCE DISCOVERABILITY
+
+Implement technical SEO for all public pages.
+
+Include:
+- Unique page titles.
+- Meta descriptions.
+- Canonical URLs.
+- Open Graph metadata.
+- XML sitemap.
+- Robots.txt.
+- Breadcrumbs.
+- Internal linking.
+- Clean product URLs.
+- Product-specific metadata.
+- Image alt text.
+- Proper heading hierarchy.
+- Fast-loading product galleries.
+- Relevant structured data.
+
+Implement valid product structured data using accurate product information, such as:
+- Product name.
+- Description.
+- Image.
+- SKU.
+- Brand.
+- Price.
+- Currency.
+- Availability.
+- Valid offers.
+- Genuine review information where eligible.
+- Return information where supported.
+
+Use structured data only when the displayed page content supports it.
+
+Configure a product feed and Google Merchant Center guidance where appropriate.
+
+Do not fabricate ratings, availability, sale prices, or certification claims to improve search appearance.
+
+Official Google references:
+- Product structured data: https://developers.google.com/search/docs/appearance/structured-data/product
+- E-commerce product data: https://developers.google.com/search/docs/specialty/ecommerce/share-your-product-data-with-google
+- E-commerce SEO: https://developers.google.com/search/docs/specialty/ecommerce
+
+---
+
+# 10. SECURITY, PRIVACY, AND ACCESSIBILITY
+
+Implement:
+- Secure authentication.
+- Server-side authorization.
+- Role-based access.
+- Input validation.
+- Secure session management.
+- Rate limiting.
+- Payment webhook verification.
+- Safe image uploads.
+- Least-privilege permissions.
+- Audit logging.
+- Privacy-conscious analytics.
+- Data deletion workflows.
+- Secure handling of customer addresses and purchase histories.
+
+Apply relevant Indian data protection, consumer, e-commerce, and tax requirements, plus other regional laws where applicable. Have policies reviewed before production launch.
+
+Aim for WCAG 2.2 AA accessibility practices.
+
+Ensure:
+- Keyboard-accessible navigation.
+- Visible focus indicators.
+- Accessible form labels.
+- Adequate color contrast.
+- Descriptive image alt text.
+- Accessible dialogs and menus.
+- Reduced-motion support.
+- Responsive text.
+- Screen-reader-friendly status messages.
+
+---
+
+# 11. PERFORMANCE AND RESPONSIVE DESIGN
+
+Optimize the website for:
+- Mobile phones.
+- Tablets.
+- Laptops.
+- Desktop monitors.
+- Large screens.
+
+Prioritize:
+- Image optimization.
+- Responsive image delivery.
+- Font loading.
+- Core Web Vitals.
+- Low layout shift.
+- Fast product browsing.
+- Efficient database queries.
+- Appropriate caching.
+- Minimal unnecessary JavaScript.
+- Graceful loading and error states.
+
+Maintain visual quality while loading images and data. Do not let image loading change product card heights unexpectedly.
+
+Avoid oversized images, excessive animation, unnecessary dependencies, and giant monolithic components.
+
+---
+
+# 12. TESTING AND QUALITY ASSURANCE
+
+Before declaring the website complete, test all important functionality.
+
+## Visual tests
+- Balanced ivory, emerald, champagne, and blush color system.
+- Readable typography and comfortable contrast.
+- Premium product imagery actually integrated.
+- No broken images.
+- Consistent product card layouts.
+- Correct spacing.
+- No clipped text.
+- No overlapping components.
+- Desktop navigation stays on one horizontal line.
+- Navigation labels never wrap.
+- Mobile menu functions correctly.
+- No horizontal page overflow.
+
+## E-commerce tests
+- Product search and filters work.
+- Product variants update correctly.
+- Inventory availability is accurate.
+- Cart totals are correct.
+- Prices are validated on the server.
+- Discount codes follow their rules.
+- Checkout validates customer details.
+- Payment webhooks are verified.
+- Failed payments do not mark orders paid.
+- Duplicate payment processing is prevented.
+- Refund status is tracked correctly.
+
+## Account and administration tests
+- Authentication works.
+- Password reset works.
+- Customers only see their own orders.
+- Staff permissions are enforced.
+- Admin operations are validated.
+- Product changes update the storefront.
+- Inventory changes are consistent.
+- Custom enquiries are recorded.
+- Repair requests can be tracked.
+- Image uploads work securely.
+
+## Technical tests
+- TypeScript checks.
+- Linting.
+- Production build.
+- Unit and integration tests.
+- End-to-end tests for critical journeys.
+- Accessibility checks.
+- SEO metadata validation.
+- Structured-data validation.
+- Broken-link checks.
+- Database security review.
+
+Fix critical errors before delivery and document any remaining external setup requirements.
+
+---
+
+# 13. REQUIRED DELIVERABLES
+
+Deliver:
+
+1. Complete multi-page jewellery website.
+2. Original SVG logo and brand identity.
+3. Splash AI-generated or compatible generated jewellery image assets.
+4. All generated images integrated into the application.
+5. Responsive shared header and footer.
+6. Functional product catalogue and collections.
+7. Product detail pages and filters.
+8. Search and wishlist.
+9. Shopping cart and checkout.
+10. Secure authentication.
+11. Customer account dashboard.
+12. Order tracking.
+13. Custom jewellery enquiry workflow.
+14. Jewellery care and repair requests.
+15. Inventory management.
+16. Secure payment integration.
+17. Admin dashboard.
+18. Database schema and migrations.
+19. Demo seed data clearly identified as fictional.
+20. `.env.example`.
+21. SEO metadata and structured data.
+22. Testing instructions and critical test cases.
+23. README and deployment guide.
+24. Integration configuration instructions.
+25. A clear list of features requiring real credentials, verified product information, or external services.
+
+Do not claim that an integration is live unless it has been configured and tested.
+
+---
+
+# 14. FINAL EXECUTION PLAN
+
+Build the application in this order:
+
+1. Research jewellery retail requirements and define the brand.
+2. Establish the color palette, typography, and design system.
+3. Create the SVG logo.
+4. Generate and integrate the required Splash AI jewellery images or an actual compatible image-generation fallback.
+5. Build the shared header and footer.
+6. Test the single-line desktop navigation.
+7. Build all public pages and collection routes.
+8. Implement the product catalogue and detail pages.
+9. Implement cart and checkout.
+10. Configure authentication and customer accounts.
+11. Build custom jewellery, appointment, and repair workflows.
+12. Implement the database and inventory logic.
+13. Build the admin dashboard.
+14. Integrate payments, notifications, and shipping services.
+15. Implement SEO, accessibility, and performance optimizations.
+16. Test all routes, product data, transactions, and responsive layouts.
+17. Fix issues.
+18. Provide complete source code and deployment documentation.
+
+Use realistic sample products for the demonstration, but clearly label fictional products, prices, and certifications as demo data. Replace them with verified business data before launch.
+
+## FINAL NON-NEGOTIABLE RULES
+
+- The design must be beautiful, refined, colorful, and easy on the eyes.
+- Do not make the website entirely black or entirely gold.
+- Use champagne gold, ivory, emerald, white, and subtle blush in a balanced design.
+- Generate and integrate actual jewellery images through Splash AI or a real image-generation fallback.
+- Build a complete working application, not just a visual mockup.
+- Every navigation item must link to the correct page.
+- Every important button must perform its advertised action.
+- Desktop navigation must remain on a single horizontal line.
+- Labels such as “About Us,” “Custom Jewellery,” and “Bridal Jewellery” must never wrap onto multiple lines in the desktop header.
+- Switch to a responsive mobile menu when space is insufficient.
+- Product prices, availability, inventory, payments, and certification claims must be validated.
+- Never fabricate live rates, product authenticity, reviews, payment success, or shipment status.
+
+Build AURELIA FINE JEWELS as a complete, elegant, secure, responsive, client-ready jewellery e-commerce platform.
